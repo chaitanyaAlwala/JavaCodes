@@ -1,0 +1,137 @@
+enter the the variable of modal in html code
+Modal
+enter the number of strings
+5
+Please enter all the strings on by one in new line
+View Add-Ons
+Add-Ons
+Add-On Details
+Qty
+Unit Price
+
+ .TS file code, of angular component(only if its SPA)
+'',
+'viewAddOns',
+'addOns',
+'addOnDetails',
+'qty',
+'unitPrice',
+
+This code has to be placed under java modal---------------------------------------------
+    @I18N(value="View Add-Ons") 
+    private String viewAddOns;
+
+    @I18N(value="Add-Ons") 
+    private String addOns;
+
+    @I18N(value="Add-On Details") 
+    private String addOnDetails;
+
+    @I18N(value="Qty") 
+    private String qty;
+
+    @I18N(value="Unit Price") 
+    private String unitPrice;
+
+    public String getViewAddOns() {
+        return viewAddOns;
+    }
+
+    public String getAddOns() {
+        return addOns;
+    }
+
+    public String getAddOnDetails() {
+        return addOnDetails;
+    }
+
+    public String getQty() {
+        return qty;
+    }
+
+    public String getUnitPrice() {
+        return unitPrice;
+    }
+
+
+HTML Code of AEM component--------------------------------------------- 
+
+="${Modal.}"
+viewaddons="${Modal.viewAddOns}"
+addons="${Modal.addOns}"
+addondetails="${Modal.addOnDetails}"
+qty="${Modal.qty}"
+unitprice="${Modal.unitPrice}"
+
+XML output should be placed under the cq-dialog->content.xml-------------------------------- 
+
+		            <viewAddOns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                        fieldLabel="View Add-Ons"
+                        name="./viewAddOns"
+                        removeSingleParagraphContainer="true"
+                        useFixedInlineToolbar="{Boolean}true">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/tng-aem-project/authoring/pluginsRTE/rtePlugins"/>
+                        <uiSettings
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/tng-aem-project/authoring/pluginsRTE/uiSettings"/>
+                    </viewAddOns>
+		            <addOns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                        fieldLabel="Add-Ons"
+                        name="./addOns"
+                        removeSingleParagraphContainer="true"
+                        useFixedInlineToolbar="{Boolean}true">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/tng-aem-project/authoring/pluginsRTE/rtePlugins"/>
+                        <uiSettings
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/tng-aem-project/authoring/pluginsRTE/uiSettings"/>
+                    </addOns>
+		            <addOnDetails
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                        fieldLabel="Add-On Details"
+                        name="./addOnDetails"
+                        removeSingleParagraphContainer="true"
+                        useFixedInlineToolbar="{Boolean}true">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/tng-aem-project/authoring/pluginsRTE/rtePlugins"/>
+                        <uiSettings
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/tng-aem-project/authoring/pluginsRTE/uiSettings"/>
+                    </addOnDetails>
+		            <qty
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                        fieldLabel="Qty"
+                        name="./qty"
+                        removeSingleParagraphContainer="true"
+                        useFixedInlineToolbar="{Boolean}true">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/tng-aem-project/authoring/pluginsRTE/rtePlugins"/>
+                        <uiSettings
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/tng-aem-project/authoring/pluginsRTE/uiSettings"/>
+                    </qty>
+		            <unitPrice
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                        fieldLabel="Unit Price"
+                        name="./unitPrice"
+                        removeSingleParagraphContainer="true"
+                        useFixedInlineToolbar="{Boolean}true">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/tng-aem-project/authoring/pluginsRTE/rtePlugins"/>
+                        <uiSettings
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/tng-aem-project/authoring/pluginsRTE/uiSettings"/>
+                    </unitPrice>
